@@ -1,0 +1,1 @@
+[ "$(grep -v '^>' lambda_phage_rev.fasta | tr -d '\n\r' | md5sum | awk '{print $1}')" = "$(grep -v '^>' lambda_phage_py_rev.fasta | tr -d '\n\r' | md5sum | awk '{print $1}')" ] && echo "PASS: sequences match" || echo "FAIL: sequences differ"
