@@ -1,1 +1,32 @@
+# Exercise 5.2
+num_seqs.csv: $(HUMAN_CDNA).nseqs.csv $(DMEL_CDNA).nseqs.csv
+	cat $^ > $@
 
+# COMPLETE
+%.fa.gz.nseqs.csv: %.fa.gz
+
+# Exercise 5.3
+num_Ns.csv: $(HUMAN_CDNA).nN.csv $(DMEL_CDNA).nN.csv
+	cat $^ > $@
+
+# COMPLETE
+%.fa.gz.nN.csv: %.fa.gz
+
+#Exercise 5.4: Sequence Transformation
+transform: $(HUMAN_CDNA).transformed $(DMEL_CDNA).transformed
+
+# COMPLETE
+%.fa.gz.transformed: %.fa.gz
+
+# Exercise 5.5
+# Rule to mask poly-A motifs
+polyA_masked: $(HUMAN_CDNA:.fa.gz=.masked_polyA.fa.gz) \
+$(DMEL_CDNA:.fa.gz=.masked_polyA.fa.gz)
+
+# COMPLETE
+%.masked_polyA.fa.gz: %.fa.gz
+	@echo "Masking Poly-A motifs in $<..."
+
+# COMPLETE
+#Exercise 5.6: 7096
+results/GAATTC.num.txt: $(HUMAN_DNA)
