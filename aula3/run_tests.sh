@@ -1,16 +1,20 @@
+#!/usr/bin/env bash
 
+run_pair() {
+    local name="$1"
+    local seq1="$2"
+    local seq2="$3"
+    local result
 
-result1=$(python hamming_distance.py "--seq1" "ATGCGTACGTAGCTA" "--seq2" "ATGCCTACGTAGCTA")
-result2=$(python hamming_distance.py "--seq1" "GAGCCTACTAACGGGAT" "--seq2" "CATCGTAATGACGGCCT")
-result3=$(python hamming_distance.py "--seq1" "ATGC" "--seq2" "ATG")
-python hamming_distance.py "--seq1" "ATGCGTACGTAGCTA" "--seq2" "ATGCCTACGTAGCTA"
-exit_code1=$?
-python hamming_distance.py "--seq1" "GAGCCTACTAACGGGAT" "--seq2" "CATCGTAATGACGGCCT"
-exit_code2=$?
-python hamming_distance.py "--seq1" "ATGC" "--seq2" "ATG"
-exit_code3=$?
-cat << EOF >> result.csv
-Pair A, $exit_code1
-Pair B, $exit_code2
-Pair C, $exit_code3
+    if result=$(python hamming_distance.py --seq1 "$seq1" --seq2 "$seq2" 2>/dev/null); then
+        echo "$name,$result"
+    else
+        echo "$name,-1"
+    fi
+}
+
+cat > hamming.csv << EOF
+Pair A,$(run_pair "Pair A" "ATGCGTACGTAGCTA" "ATGCCTACGTAGCTA" | cut -d, -f2)
+Pair B,$(run_pair "Pair B" "GAGCCTACTAACGGGAT" "CATCGTAATGACGGCCT" | cut -d, -f2)
+Pair C,$(run_pair "Pair C" "ATGC" "ATG" | cut -d, -f2)
 EOF
