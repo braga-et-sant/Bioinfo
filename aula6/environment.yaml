@@ -1,0 +1,12 @@
+name: bioinfo_lab6
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - samtools
+  - minimap2
+  - bowtie2
+  - blast
+  - emboss
+  - seqkit
