@@ -1,0 +1,204 @@
+Exercicio 1
+1.
+Verdadeiro.
+Dados moleculares costumam ser mais fiáveis porque têm muitos mais caracteres comparáveis e podem ser analisados com modelos estatísticos.
+Mas dados morfológicos continuam úteis, sobretudo em fósseis.
+2.
+Resposta: c) Rosa = folhas; Azul = nós internos; Verde = raíz.
+3.
+Sim (S).
+As duas têm a mesma topologia porque mostram os mesmos grupos-irmãos:
+human + chimp juntos
+mouse + rat juntos
+A posição/desenho mudou, mas as relações evolutivas são iguais.
+4.
+A distância genética é a soma dos ramos que ligam human e chimp.
+Pela escala, cada ramo terminal tem cerca de 0,01, então:
+0,01 + 0,01 = 0,02
+5.
+c) O ancestral do human e chimpanzee.
+Porque numa árvore enraizada, o tempo vai da raiz para as pontas.
+O nó ancestral de human + chimp está mais próximo das pontas do que o ancestral comum dos 4 grupos, portanto ocorreu mais recentemente.
+
+
+
+Exercicio 2
+a.
+S1	S2	S3	S4
+S1	0	3	4	5
+S2	3	0	6	8
+S3	4	6	0	9
+S4	5	8	9	0
+
+b.
+ex2b.py
+
+c.
+Usando UPGMA com a matriz anterior, a árvore em Newick com comprimentos de ramo fica:
+
+(((S1:1.5,S2:1.5):1.0,S3:2.5):1.1667,S4:3.6667);
+
+Sem comprimentos de ramo, seria só:
+
+(((S1,S2),S3),S4);
+
+Porque primeiro junta S1 + S2, depois esse cluster junta com S3, e por fim junta com S4.
+
+
+ex3
+b.
+CLOSE:
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+NP_000509.1               ----------MVHLTPEEKSAVTALWGKVNVDEVG--GEALGRLLVVYPWTQRFFESFG-	47
+NP_005359.1               -----------MGLSDGEWQLVLNVWGKVEADIPGHGQEVLIRLFKGHPETLEKFDKFK-	48
+NP_067080.1               -------------MERPEPELIRQSWRAVSRSPLEHGTVLFARLFALEPDLLPLFQYNCR	47
+sp|P02237|LGB1_SOYBN      ----------MGAFTDKQEALVSSSFEAFKTNIPQYSVVFYTSILEKAPVAKDLFSFLAN	50
+1D8U_1|Chains             MALVEDNNAVAVSFSEEQEALVLKSWAILKKDSANIALRFFLKIFEVAPSASQMFSFLRN	60
+                                       :   :   :   :  .. .           ::   *     *.
+
+NP_000509.1               DLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHL---DN---LKGTFATLSELHCDKLHVDP	101
+NP_005359.1               HLKSEDEMKASEDLKKHGATVLTALGGILKKK---GH---HEAEIKPLAQSHATKHKIPV	102
+NP_067080.1               QFSSPEDCLSSPEFLDHIRKVMLVIDAAVTNV---EDLSSLEEYLASLGRKHRAV-GVKL	103
+sp|P02237|LGB1_SOYBN      GVDP-----TNPKLTGHAEKLFGLVRDSAGQLKASGTVVID----AALGSIHAQK-AITD	100
+1D8U_1|Chains             SDVP---LEKNPKLKTHAMSVFVMTCEAAAQLRKAGKVTVRDTTLKRLGATHLKY-GVGD	116
+                                    . ..  *  .::        :                *.  *     :
+
+NP_000509.1               ENFRLLGNVLVCVLAHHF-GKEFTPPVQAAYQKVVAGVANALAHKYH------	147
+NP_005359.1               KYLEFISECIIQVLQSKH-PGDFGADAQGAMNKALELFRKDMASNYKELGFQG	154
+NP_067080.1               SSFSTVGESLLYMLEKCL-GPAFTPATRAAWSQLYGAVVQAMSRGWDGE----	151
+sp|P02237|LGB1_SOYBN      PQFVVVKEALLKTIKEAV-GDKWSDELSSAWEVAYDELAAAIKKAF-------	145
+1D8U_1|Chains             AHFEVVKFALLDTIKEEVPADMWSPAMKSAWSEAYDHLVAAIKQEMKPAE---	166
+                            :  :   ::  :        :     .* .     .   :
+
+DISTANT:
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+NP_990820.1         MVHWTAEEKQLITGLWGKVNVAECGAEALARLLIVYPWTQRFFASFGNLSSPTAILGNPM	60
+NP_058652.1         MVHLTDAEKSAVSCLWAKVNPDEVGGEALGRLLVVYPWTQRYFDSFGDLSSASAIMGNPK	60
+NP_000509.1         MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPK	60
+XP_508242.1         MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPK	60
+NP_001257813.1      MVHLTAEEKSLVSGLWGKVNVDEVGGEALGRLLIVYPWTQRFFDSFGDLSTPDAVMSNAK	60
+                    *** *  **. :: **.***  * *.***.***:*******:* ***:**:  *::.*
+
+NP_990820.1         VRAHGKKVLTSFGDAVKNLDNIKNTFSQLSELHCDKLHVDPENFRLLGDILIIVLAAHFS	120
+NP_058652.1         VKAHGKKVITAFNEGLKNLDNLKGTFASLSELHCDKLHVDPENFRLLGNAIVIVLGHHLG	120
+NP_000509.1         VKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFG	120
+XP_508242.1         VKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFG	120
+NP_001257813.1      VKAHGKKVLNSFSDGLKNLDNLKGTFAKLSELHCDKLHVDPENFKLLGNVLVCVLAHHFG	120
+                    *:******: :*.:.: :***:*.**: ****************:***: :: **. *:.
+
+NP_990820.1         KDFTPECQAAWQKLVRVVAHALARKYH	147
+NP_058652.1         KDFTPAAQAAFQKVVAGVATALAHKYH	147
+NP_000509.1         KEFTPPVQAAYQKVVAGVANALAHKYH	147
+XP_508242.1         KEFTPPVQAAYQKVVAGVANALAHKYH	147
+NP_001257813.1      KEFTPQVQAAYQKVVAGVANALAHKYH	147
+                    *:***  ***:**:*  ** ***:***
+
+c.
+Nos homólogos próximos, o alinhamento mostra mais diferenças: há muitos gaps, menos posições totalmente conservadas *, e várias regiões com baixa semelhança. Isto indica que estas globinas são mais divergentes entre si, apesar de serem funcionalmente relacionadas.
+
+Nos homólogos distantes apresentados, o alinhamento está muito mais conservado: quase não há gaps, as sequências têm o mesmo tamanho e há muitas posições com *, ou seja, aminoácidos idênticos em todas as sequências. Isto sugere maior semelhança entre estas sequências.
+
+So basically:
+CLOSE = more gaps and variation.
+DISTANT = cleaner alignment, more conserved positions.
+
+d.
+Neighbor Close:
+Phylogenetic Tree
+(
+(
+NP_000509.1:0.35202,
+NP_005359.1:0.39455)
+:0.04741,
+NP_067080.1:0.39278,
+(
+sp|P02237|LGB1_SOYBN:0.29173,
+1D8U_1|Chains:0.28069)
+:0.13671);
+Phylogram
+
+Selected  0  branches with current label
+NP_067080.1 0.39278
+NP_000509.1 0.35202
+NP_005359.1 0.39455
+sp|P02237|LGB1_SOYBN 0.29173
+1D8U_1|Chains 0.28069
+
+Close upgma:
+Phylogenetic Tree
+(
+(
+(
+NP_000509.1:0.373288,
+NP_005359.1:0.373288):0.406736,
+NP_067080.1:0.406736):0.417154,
+(
+sp|P02237|LGB1_SOYBN:0.286207,
+1D8U_1|Chains:0.286207):0.417154):0.417154;
+Phylogram
+
+Selected  0  branches with current label
+NP_067080.1 0.406736
+sp|P02237|LGB1_SOYBN 0.286207
+1D8U_1|Chains 0.286207
+NP_000509.1 0.373288
+NP_005359.1 0.373288
+1.00
+
+distant neighbor:
+Phylogenetic Tree
+(
+(
+NP_990820.1:0.21259,
+NP_058652.1:0.12075)
+:0.03231,
+(
+NP_000509.1:0.00000,
+XP_508242.1:0.00000)
+:0.05272,
+NP_001257813.1:0.04932);
+Phylogram
+
+Selected  0  branches with current label
+NP_001257813.1 0.04932
+NP_990820.1 0.21259
+NP_058652.1 0.12075
+NP_000509.1 0.00000
+XP_508242.1 0.00000
+
+distant Upgma:
+Phylogenetic Tree
+(
+NP_990820.1:0.153912,
+(
+NP_058652.1:0.100907,
+(
+(
+NP_000509.1:0,
+XP_508242.1:0):0.0510204,
+NP_001257813.1:0.0510204):0.100907):0.153912):0.153912;
+Phylogram
+
+Selected  0  branches with current label
+NP_990820.1 0.153912
+NP_058652.1 0.100907
+NP_001257813.1 0.0510204
+NP_000509.1 0
+XP_508242.1 0
+0.20
+
+
+e.
+Yes, d is exactly what you use for e. You compare the Neighbor-Joining and UPGMA trees for both groups.
+
+For e, you can answer:
+
+As árvores dos homólogos próximos mostram dois agrupamentos principais: NP_000509.1 + NP_005359.1 e P02237 + 1D8U, enquanto NP_067080.1 aparece mais separado. Isto indica maior divergência dentro deste grupo.
+
+Nas árvores dos homólogos distantes, NP_000509.1 e XP_508242.1 aparecem juntos com distância 0, ou seja, são praticamente/idênticas no alinhamento. NP_001257813.1 fica próximo desse par, enquanto NP_058652.1 e sobretudo NP_990820.1 aparecem mais afastadas.
+
+A diferença entre Neighbor-Joining e UPGMA é que UPGMA força uma árvore ultramétrica, assumindo ritmo evolutivo constante. Por isso, os comprimentos dos ramos ficam mais “regularizados”. Neighbor-Joining não impõe essa condição e pode representar melhor taxas evolutivas diferentes entre sequências.
